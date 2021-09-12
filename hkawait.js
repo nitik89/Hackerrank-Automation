@@ -61,8 +61,11 @@ async function questionSolve(Cpage,question,answer){
         await Cpage.keyboard.down('Control');
         await Cpage.keyboard.press('KeyV');
         await Cpage.keyboard.up('Control');
+        await Cpage.waitFor(3000);
         await waitAndClick(".ui-content.align-icon-right",Cpage);
         await waitAndClick(".hr-monaco-submit",Cpage);
+       
+       
         resolve();
         }
         catch(err){
